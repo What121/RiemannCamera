@@ -1,4 +1,7 @@
 # RiemannCamera
+使用的是OpenCV库来进行滤镜和图片的处理，当时发现滤镜处理的时间比较长，实时性还有待进一步提高，对于使用NDK对camera处理每一帧，算法必须要非常优化和简单，对于一些复杂算法，处理时间比较长的，就不太适合实时处理的滤镜。使用OpenGL和RS渲染脚本，比起使用ndk来处理每一帧的图片，OpenGL和RenderScript脚本处理的相当快，它们的运算都是使用GPU去渲染的，而OpenCV的处理速度取决于CPU的执行速度，下面介绍下使用OpenGL和RenderScript来渲染图片流。
+
+
 Android中滤镜使用OpenGL和RenderScript处理图片
 1.OPENGL滤镜
 2.RenderScript处理摄像头图片
